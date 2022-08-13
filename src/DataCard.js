@@ -1,5 +1,9 @@
-export default function DataCard () {
-    return(
-        <h5>A card with data</h5>
-    )
+export default function DataCard ({ alleleData }) {
+
+    
+        return (
+            <div className="allele-card">
+                <p>{alleleData}</p>
+            </div>
+        )
 }
