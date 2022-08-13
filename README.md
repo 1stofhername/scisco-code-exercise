@@ -1,10 +1,10 @@
-# Getting Started with Create React App
-
+# Scisco Genetics Code Exercise
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project contains images from <a href="www.freepik.com" target="_blank" rel="noopener norefferer">freepik.com</a>
 
 ## Available Scripts
 
-In the project directory, you can run:
+A simple webpage that presents a list of allele data from <a href="https://www.ebi.ac.uk/ipd/rest/#/Allele%20API/listAlleles" target="blank" rel="noopener noreferrer">the Immuno Polymorphism Database.</a>
 
 ### `yarn start`
 
