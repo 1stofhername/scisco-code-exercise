@@ -1,6 +1,7 @@
 import InfiniteScroll from "react-infinite-scroller";
+import { useEffect, useState } from 'react';
 
-export default function DataContainer ({ data }) {
+export default function DataContainer () {
 
     const [data, setData]=useState([])
   useEffect(()=>{
