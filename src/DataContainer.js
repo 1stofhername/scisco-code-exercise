@@ -1,27 +1,37 @@
-// import InfiniteScroll from "react-infinite-scroller";
-// import { loadFunc } from "react-infinite-scroller";
-
 import { v4 as uuidv4 } from 'uuid';
 import DataCard from './DataCard';
 import { useEffect, useState } from 'react';
 
 export default function DataContainer () {
     const [alleleArray, setAlleleArray]=useState([]);
+    let offset = 10;
+
+    const loadData = () => {
+        fetch(`https://www.ebi.ac.uk/cgi-bin/ipd/api/allele?limit=${offset}`)
+        .then((res)=> res.json())
+        .then((res)=>setAlleleArray(res.data))
+        .then(console.log('data loaded'));
+    };
+
 
   useEffect(()=>{
-    fetch("https://www.ebi.ac.uk/cgi-bin/ipd/api/allele?limit=1000")
-    .then((r)=> r.json())
-    .then((data)=>setAlleleArray(data.data));
+    loadData();
   }, []);
-
+  
+  if(alleleArray) {
     return(
         <div className="data-container">
         
-            {alleleArray.map((allele)=>{
+            {alleleArray.map((allele, i)=>{
                 return (
-                <DataCard key={uuidv4()} accession={allele.accession} name={allele.name} />
+                <DataCard key={uuidv4()} accession={allele.accession} name={allele.name} index={i+1} />
                 )})
             }
         </div>
     )
+} else {
+    return (
+    <p>Loading</p>
+    )
+};
 }
