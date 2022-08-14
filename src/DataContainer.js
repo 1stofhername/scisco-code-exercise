@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import DataCard from './DataCard';
 import { useEffect, useState } from 'react';
+import Pagination from './Pagination';
 import logo from './logo.svg';
 
 export default function DataContainer () {
