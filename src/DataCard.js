@@ -1,9 +1,10 @@
-export default function DataCard ({ alleleData }) {
+export default function DataCard ({ accession, name }) {
 
     
         return (
             <div className="allele-card">
-                <p>{alleleData}</p>
+                <p>{accession}</p>
+                <p>{name}</p>
             </div>
         )
 }

@@ -15,11 +15,10 @@ export default function DataContainer () {
         <div className="data-container">
             <h4>Data Container</h4>
             {alleleArray.map((allele)=>{
-                return(
-                <DataCard data={allele} />
-                )
-                })
-            };
+                return (
+                <DataCard accession={allele.accession} name={allele.name} />
+                )})
+            }
         </div>
     )
 }

@@ -4,7 +4,7 @@ This project contains images from <a href="www.freepik.com" target="_blank" rel=
 
 ## Available Scripts
 
-A simple webpage that presents a list of allele data from <a href="https://www.ebi.ac.uk/ipd/rest/#/Allele%20API/listAlleles" target="blank" rel="noopener noreferrer">the Immuno Polymorphism Database.</a>
+A simple webpage that presents a list of the first 1000 allele data entries from <a href="https://www.ebi.ac.uk/ipd/rest/#/Allele%20API/listAlleles" target="blank" rel="noopener noreferrer">The Immuno Polymorphism Database.</a>
 
 ### `yarn start`
 
