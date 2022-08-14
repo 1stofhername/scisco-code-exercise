@@ -37,5 +37,21 @@
 }
 
 .data-container {
-  height:100vh;
+  max-height:100vh;
+  
+}
+
+.allele-card {
+  border-color: black;
+  border-width: .5px;
+  border-style: solid;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.allele-symbol {
+  height:50px;
 }

@@ -1,4 +1,7 @@
 // import InfiniteScroll from "react-infinite-scroller";
+// import { loadFunc } from "react-infinite-scroller";
+
+import { v4 as uuidv4 } from 'uuid';
 import DataCard from './DataCard';
 import { useEffect, useState } from 'react';
 
@@ -13,10 +16,10 @@ export default function DataContainer () {
 
     return(
         <div className="data-container">
-            <h4>Data Container</h4>
+        
             {alleleArray.map((allele)=>{
                 return (
-                <DataCard accession={allele.accession} name={allele.name} />
+                <DataCard key={uuidv4()} accession={allele.accession} name={allele.name} />
                 )})
             }
         </div>

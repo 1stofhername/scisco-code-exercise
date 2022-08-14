@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} /> */}
+        <h2>Immuno Polymorphism Data</h2>
       </header>
       <DataContainer />
     </div>
