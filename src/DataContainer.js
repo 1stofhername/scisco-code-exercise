@@ -1,16 +1,16 @@
 import { v4 as uuidv4 } from 'uuid';
 import DataCard from './DataCard';
 import { useEffect, useState } from 'react';
+import logo from './logo.svg';
 
 export default function DataContainer () {
     const [alleleArray, setAlleleArray]=useState([]);
-    let offset = 10;
 
     const loadData = () => {
-        fetch(`https://www.ebi.ac.uk/cgi-bin/ipd/api/allele?limit=${offset}`)
+        fetch("https://www.ebi.ac.uk/cgi-bin/ipd/api/allele?limit=1000")
         .then((res)=> res.json())
         .then((res)=>setAlleleArray(res.data))
-        .then(console.log('data loaded'));
+        .then(console.log());
     };
 
 
@@ -18,7 +18,7 @@ export default function DataContainer () {
     loadData();
   }, []);
   
-  if(alleleArray) {
+  if(alleleArray.length > 0) {
     return(
         <div className="data-container">
         
@@ -31,7 +31,12 @@ export default function DataContainer () {
     )
 } else {
     return (
-    <p>Loading</p>
+    <div>
+        <p>Loading...</p>
+    </div>
+    
+    
+    
     )
 };
 }
