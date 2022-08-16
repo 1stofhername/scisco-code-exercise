@@ -1,10 +1,10 @@
 import logo from './logo.svg'
-export default function DataCard ({ accession, name, index }) {
+export default function DataCard ({ allele }) {
 
+    const { accession, name } = allele
     
         return (
             <div className="allele-card">
-                <div className='count-container'><p>{index}</p></div>
                 <div className='icon-container'>
                     <img src={logo} className="allele-symbol" />
                 </div>

@@ -41,3 +41,10 @@
 .pageNumbers li.button:focus{
     outline: none;
 }
+
+.page-navigation {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
