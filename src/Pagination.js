@@ -1,5 +1,5 @@
 import DataCard from './DataCard';
-import PageControls from './css/PageControls';
+import PageControls from './PageControls';
 import './css/pagination.css';
 
 
