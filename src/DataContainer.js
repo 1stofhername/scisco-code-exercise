@@ -27,7 +27,7 @@ export default function DataContainer2 () {
 
     const getDisplayData = () => {
         setAllelePageData(alleleData.slice(currentPage * resultsPerPage - resultsPerPage, currentPage * resultsPerPage));
-    }
+    };
 
     const onPageChange= (pageNumber)=>{
         setCurrentPage(pageNumber);
@@ -39,13 +39,17 @@ export default function DataContainer2 () {
             setCurrentPage(prev=> prev-1);
           }
           
-       }
+       };
       
       const onNextClick = ()=>{
            if(currentPage+1 <= maxPageLimit){
             setCurrentPage(prev=>prev+1);   
            }
-        }
+        };
+
+      const onPageClick = (e) => {
+        setCurrentPage(e);
+      };
     
       const paginationAttributes = {
         currentPage,

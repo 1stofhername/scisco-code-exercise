@@ -2,6 +2,7 @@ import './css/page-controls.css';
 
 export default function PageControls (props) {
     const { currentPage, maxPageLimit, minPageLimit } = props;
+    let pageArray = [];
 
     const handlePrevClick = ()=>{
         props.onPrevClick();
@@ -13,15 +14,18 @@ export default function PageControls (props) {
 
     const handlePageChange = ()=>{
         props.onPageChange();
-    }
-
-    const pageNumbers = ()=>{
-        if(currentPage < 7){
-            Array.from(Array(currentPage).keys());
-        }
     };
 
-    console.log(pageNumberArray);
+    const pageNumber = () => {
+        let pageNumber = 10;
+        if (currentPage < 7){
+        while (pageNumber > 0){
+            pageArray.unshift(pageNumber);pageNumber--;
+        };
+        console.log(pageArray)
+    }else {}} 
+
+    pageNumber();
 
     return (
         <div className='page-controls-container'>
@@ -31,11 +35,11 @@ export default function PageControls (props) {
                     <button onClick={handleNextClick}>Next</button>
             </span>
             <span className='page-number-container'>
-                
-                <p>{currentPage}</p>
-
-                <p>...</p>
-                <p>{maxPageLimit}</p>
+                {pageArray.map((page)=>{
+                    return (
+                    <p className="page-number" id={currentPage === page ? "active" : null} onClick={handlePageChange}>{page}</p>
+                    )}
+                )}
             </span>
         </div>
                 

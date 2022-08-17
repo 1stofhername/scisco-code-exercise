@@ -15,4 +15,10 @@ button {
     display:flex;
     margin-left:50%;
     margin-right:50%;
+    font-size: 1.5em;
+}
+
+.page-number#active {
+    border-bottom-style: solid;
+    color: rgb(253, 125, 36);
 }
