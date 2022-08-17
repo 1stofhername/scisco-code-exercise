@@ -13,7 +13,7 @@ h4:before {
     overflow: hidden;
     max-width: 7em;
     white-space: nowrap;
-    color: orange;
+    color: rgb(253, 125, 36);
     animation: loading 8s linear;
 }
 @keyframes loading {

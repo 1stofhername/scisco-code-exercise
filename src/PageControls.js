@@ -3,6 +3,7 @@ import './css/page-controls.css';
 export default function PageControls (props) {
     const { currentPage, maxPageLimit, minPageLimit } = props;
     let pageArray = [];
+    const elipse = "...";
 
     const handlePrevClick = ()=>{
         props.onPrevClick();
@@ -29,18 +30,18 @@ export default function PageControls (props) {
 
     return (
         <div className='page-controls-container'>
-            <span className='button-container'>
+            <div className='button-container'>
                 {currentPage > 1 ?
                     <button onClick={handlePrevClick}>Prev</button>: null}
                     <button onClick={handleNextClick}>Next</button>
-            </span>
-            <span className='page-number-container'>
+            </div>
+            <div className='page-number-container'>
                 {pageArray.map((page)=>{
                     return (
                     <p className="page-number" id={currentPage === page ? "active" : null} onClick={handlePageChange}>{page}</p>
                     )}
                 )}
-            </span>
+            </div>
         </div>
                 
     )
