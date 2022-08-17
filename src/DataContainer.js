@@ -55,6 +55,7 @@ export default function DataContainer2 () {
         currentPage,
         maxPageLimit,
         minPageLimit,
+        resultsPerPage,
         response: (alleleData.slice(currentPage * resultsPerPage - resultsPerPage, currentPage * resultsPerPage)),
       };
     

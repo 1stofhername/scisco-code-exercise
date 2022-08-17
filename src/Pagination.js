@@ -4,7 +4,6 @@ import './css/pagination.css';
 
 
 export default function Pagination (props) {
-    const { currentPage, maxPageLimit, minPageLimit } = props;
     const data = props.response;
 
     const handlePrevClick = ()=>{

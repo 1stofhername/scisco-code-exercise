@@ -1,8 +1,8 @@
 import './css/page-controls.css';
 
 export default function PageControls (props) {
-    const { currentPage, maxPageLimit, minPageLimit } = props;
-    let pageArray = [];
+    const { currentPage, maxPageLimit } = props;
+
     const elipse = "...";
 
     const handlePrevClick = ()=>{
@@ -17,16 +17,25 @@ export default function PageControls (props) {
         props.onPageChange();
     };
 
-    const pageNumber = () => {
+    const renderPageNumbers = () => {
         let pageNumber = 10;
+        let pageArray = [];
         if (currentPage < 7){
-        while (pageNumber > 0){
-            pageArray.unshift(pageNumber);pageNumber--;
-        };
-        console.log(pageArray)
-    }else {}} 
+                while (pageArray.length < 10 && pageArray.slice(-1) < maxPageLimit){
+                pageArray.unshift(pageNumber);pageNumber--;
+            } return pageArray
+        } else {
+            let lowValue = currentPage - 5;
+            let highValue = currentPage + 5;
+            
+            while (lowValue < highValue) {
+            pageArray.push(lowValue);console.log(pageArray);lowValue++;
+        } return pageArray
+            
+        }
+    } 
 
-    pageNumber();
+    // pageNumberChange();
 
     return (
         <div className='page-controls-container'>
@@ -36,11 +45,13 @@ export default function PageControls (props) {
                     <button onClick={handleNextClick}>Next</button>
             </div>
             <div className='page-number-container'>
-                {pageArray.map((page)=>{
+                {currentPage > 6 ? <p className='page-number'>1{elipse}</p>:null}
+                {renderPageNumbers().map((page)=>{
                     return (
-                    <p className="page-number" id={currentPage === page ? "active" : null} onClick={handlePageChange}>{page}</p>
+                    <p key={page} className="page-number" id={currentPage === page ? "active" : null} onClick={handlePageChange}>{page}</p>
                     )}
                 )}
+                {renderPageNumbers().slice(-1) !== maxPageLimit ? <p className = "page-number">{elipse}{maxPageLimit}</p>:null}
             </div>
         </div>
                 
