@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Pagination from './Pagination';
+import './css/data-container.css';
 import './css/loading.css';
 
 export default function DataContainer2 () {
@@ -7,7 +8,7 @@ export default function DataContainer2 () {
     const [alleleData, setAlleleData] = useState([]);
     const [allelePageData, setAllelePageData]=useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [resultsPerPage, setResultsPerPage] = useState(20);
+    const [resultsPerPage, setResultsPerPage] = useState(5);
     const [maxPageLimit, setMaxPageLimit] = useState(null);
     const minPageLimit = 1;
 
@@ -55,7 +56,7 @@ export default function DataContainer2 () {
     
       return(
         <div>
-            <h2 className='data-container-title'>Allele List</h2>
+            <h3 className='data-container-title'>Allele List</h3>
             {!loading ? <Pagination {...paginationAttributes} 
                               onPrevClick={onPrevClick} 
                               onNextClick={onNextClick}

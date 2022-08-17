@@ -1,0 +1,28 @@
+.allele-card {
+    border-color:rgba(0, 0, 0, 1);
+    border-width: .75px;
+    border-style: solid;
+    display:flex;
+    align-items: center;
+    margin:1rem;
+    border-radius: 5px;
+  }
+
+  .allele-content-container {
+    display:flex;
+    align-items: center;
+    margin-left:50%;
+    margin-right:50%;
+  }
+
+  .allele-data-container {
+    text-align: left;
+  }
+  
+  .allele-symbol {
+    height:50px;
+  }
+  
+  /* .icon-container {
+    margin-right:10px;
+  } */

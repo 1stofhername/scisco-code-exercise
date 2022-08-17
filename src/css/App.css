@@ -25,39 +25,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* .data-container {
-  max-height:100vh;
-  
-} */
-
-.allele-card {
-  border-color: black;
-  border-width: .5px;
-  border-style: solid;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-
-
-}
-
-.allele-symbol {
-  height:50px;
-}
-
-.icon-container {
-  margin-right:10px;
+p {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
