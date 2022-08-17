@@ -55,7 +55,7 @@ export default function DataContainer2 () {
     
       return(
         <div>
-            <h2>Allele List</h2>
+            <h2 className='data-container-title'>Allele List</h2>
             {!loading ? <Pagination {...paginationAttributes} 
                               onPrevClick={onPrevClick} 
                               onNextClick={onNextClick}

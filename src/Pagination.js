@@ -1,4 +1,5 @@
 import DataCard from './DataCard';
+import PageControls from './css/PageControls';
 import './css/pagination.css';
 
 
@@ -14,15 +15,23 @@ export default function Pagination (props) {
         props.onNextClick();
     }
 
+    const onPageChange = ()=>{
+        props.onPageChange();
+    }
+
     return(
         <div>
             {data.map((allele)=><DataCard key={allele.accession} allele={allele} />)}
             <div className='page-navigation'>
-                <p>{minPageLimit}</p>
-                <button onClick={handlePrevClick}>Prev</button>
+                {<PageControls {...props}
+                onPrevClick={handlePrevClick} 
+                onNextClick={handleNextClick}
+                onPageChange={onPageChange} />}
+                {/* {currentPage > 1 ?
+                <button onClick={handlePrevClick}>Prev</button>: null}
                 <p>{currentPage}</p>
                 <button onClick={handleNextClick}>Next</button>
-                <p>{maxPageLimit}</p>
+                <p>{maxPageLimit}</p> */}
             </div>
         </div>
     )
