@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './css/allele-card.css';
+import './css/data-card.css';
 
 export default function DataCard ({ allele }) {
 
@@ -12,8 +12,8 @@ export default function DataCard ({ allele }) {
                         <img src={logo} className="allele-symbol" />
                     </div>
                     <div className='allele-data-container'>
-                        <p>{accession}</p>
-                        <p>{name}</p>
+                        <p className='allele-data-text'>{accession}</p>
+                        <p className='allele-data-text'>{name}</p>
                     </div>
                 </div>
                 

@@ -1,5 +1,7 @@
 .data-container-title {
-    font-family: 'Bebas Neue';
+    font-family: 'Teko', sans-serif;
+    font-size:1.25rem;
     letter-spacing: 1px;
     color:rgba(0,0,0,0.75);
+    margin:.75rem;
   }

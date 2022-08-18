@@ -10,6 +10,7 @@ export default function DataContainer2 () {
     const [currentPage, setCurrentPage] = useState(1);
     const [resultsPerPage, setResultsPerPage] = useState(5);
     const [maxPageLimit, setMaxPageLimit] = useState(null);
+    const resultsPerPageOptions = [5, 20, 50, 100];
     const minPageLimit = 1;
 
 
@@ -46,10 +47,6 @@ export default function DataContainer2 () {
             setCurrentPage(prev=>prev+1);   
            }
         };
-
-      const onPageClick = (e) => {
-        setCurrentPage(e);
-      };
     
       const paginationAttributes = {
         currentPage,
@@ -62,6 +59,14 @@ export default function DataContainer2 () {
       return(
         <div>
             <h3 className='data-container-title'>Allele List</h3>
+            <div className="Filter">
+        <select name="results-per-page" onChange={(e)=>{setResultsPerPage(e.target.value)}}>
+          <option value="5">5</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
             {!loading ? <Pagination {...paginationAttributes} 
                               onPrevClick={onPrevClick} 
                               onNextClick={onNextClick}

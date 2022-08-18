@@ -3,20 +3,31 @@
     border-width: .75px;
     border-style: solid;
     display:flex;
+    justify-content: space-around;
     align-items: center;
     margin:1rem;
     border-radius: 5px;
+    padding:.5rem;
   }
 
   .allele-content-container {
+    font-size: 1.25rem;
     display:flex;
     align-items: center;
-    margin-left:50%;
-    margin-right:50%;
+    width:7rem;
   }
 
   .allele-data-container {
     text-align: left;
+    margin-left: 1rem;
+    margin-right:1rem;
+  }
+
+  .allele-data-text {
+    margin-bottom:0px;
+    margin-top:0px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-weight: bold;
   }
   
   .allele-symbol {
