@@ -27,8 +27,7 @@ export default function Pagination (props) {
                     onPrevClick={handlePrevClick} 
                     onNextClick={handleNextClick}
                     onPageChange={onPageChange} />
-                    
-                    };
+                    }
             </div>
         </div>
     )
