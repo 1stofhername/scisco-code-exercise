@@ -38,8 +38,7 @@ export default function DataContainer2 () {
       const onPrevClick = ()=>{
           if((currentPage-1) > 0){
             setCurrentPage(prev=> prev-1);
-          }
-          
+          };
        };
       
       const onNextClick = ()=>{
@@ -59,14 +58,6 @@ export default function DataContainer2 () {
       return(
         <div>
             <h3 className='data-container-title'>Allele List</h3>
-            <div className="Filter">
-        <select name="results-per-page" onChange={(e)=>{setResultsPerPage(e.target.value)}}>
-          <option value="5">5</option>
-          <option value="20">20</option>
-          <option value="50">50</option>
-          <option value="100">100</option>
-        </select>
-      </div>
             {!loading ? <Pagination {...paginationAttributes} 
                               onPrevClick={onPrevClick} 
                               onNextClick={onNextClick}

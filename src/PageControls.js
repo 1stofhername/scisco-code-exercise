@@ -6,11 +6,11 @@ export default function PageControls (props) {
 
     const handlePrevClick = ()=>{
         props.onPrevClick();
-    };
+    }
 
     const handleNextClick = ()=>{
         props.onNextClick();
-    };
+    }
 
     const renderPageNumbers = () => {
         let pageNumber = 10;
